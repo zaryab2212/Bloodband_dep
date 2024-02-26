@@ -1,0 +1,55 @@
+{
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/auth",
+        "dest": "server.js"
+      },
+    
+      {
+        "src": "/auth(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/auth",
+        "dest": "server.js"
+      },
+    
+      {
+        "src": "/auth(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory",
+        "dest": "server.js"
+      },
+    
+      {
+        "src": "/inventory(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/analytics",
+        "dest": "server.js"
+      },
+    
+      {
+        "src": "/analytics(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin",
+        "dest": "server.js"
+      },
+    
+      {
+        "src": "/admin(.*)",
+        "dest": "server.js"
+      }
+    ]
+  }
