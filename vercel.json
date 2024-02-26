@@ -12,26 +12,60 @@
       ],
     
     "routes": [
+ 
+    
       {
-        "src": "/auth",
+        "src": "/auth/register",
         "dest": "server.js"
       },
+      {
+        "src": "/auth/login",
+        "dest": "server.js"
+      },
+      {
+        "src": "/auth/currentuser",
+        "dest": "server.js"
+      },
+    
+    
     
       {
         "src": "/auth(.*)",
         "dest": "server.js"
       },
-      {
-        "src": "/auth",
-        "dest": "server.js"
-      },
+    
+    
     
       {
-        "src": "/auth(.*)",
+        "src": "/inventory/create",
         "dest": "server.js"
       },
       {
-        "src": "/inventory",
+        "src": "/inventory/all-records",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/recent-records",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/all-records-consumer",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/donors",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/hospitals",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/organizations",
+        "dest": "server.js"
+      },
+      {
+        "src": "/inventory/org-for-hosp",
         "dest": "server.js"
       },
     
@@ -40,7 +74,7 @@
         "dest": "server.js"
       },
       {
-        "src": "/analytics",
+        "src": "/analytics/get_bloodgroup",
         "dest": "server.js"
       },
     
@@ -49,7 +83,27 @@
         "dest": "server.js"
       },
       {
-        "src": "/admin",
+        "src": "/admin/get-hospital",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin/get-hospital(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin/get-donor",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin/get-donor(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin/get-organization",
+        "dest": "server.js"
+      },
+      {
+        "src": "/admin/get-organization(.*)",
         "dest": "server.js"
       },
     
