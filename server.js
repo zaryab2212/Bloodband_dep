@@ -27,9 +27,9 @@ app.use("/admin", AdminRoutes);
 
 // static roudts
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./build/index.html"));
-});
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./build/index.html"));
+// });
 
 //db connection
 database().catch((error) => console.log(error));
