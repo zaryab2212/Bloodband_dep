@@ -58,7 +58,7 @@ exports.login = async (req, res) => {
       });
     }
     // console.log("before jwt");
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, "myjwtsecretisher", {
       expiresIn: "1d",
     });
     return (
