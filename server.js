@@ -19,12 +19,13 @@ app.use(morgan("dev"));
 app.use(
   cors({
     origin: "https://bloodband-dep.vercel.app",
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: "Content-Type,Authorization",
     credentials: true,
   })
 );
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "./build")));
+// app.use(express.static(path.join(__dirname, "./build")));
+app.use(express.static(path.resolve(__dirname, "build")));
 // ROUTEs
 app.use("/auth", AuthRoutes);
 app.use("/inventory", InventoryRoutes);
