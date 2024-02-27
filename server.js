@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "https://bloodband-dep.vercel.app/",
+    origin: "https://bloodband-dep.vercel.app",
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
