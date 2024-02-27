@@ -113,6 +113,8 @@
       {
         "src": "/admin(.*)",
         "dest": "server.js"
-      }
+      },
+      { "src": "/", "dest": "build/index.html" },
+      { "src": "/(.+)", "dest": "build/$1" }
     ]
   }
