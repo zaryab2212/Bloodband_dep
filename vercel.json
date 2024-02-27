@@ -12,7 +12,10 @@
       ],
     
     "routes": [
- 
+      {
+        "src": "/auth",
+        "dest": "server.js"
+      },
     
       {
         "src": "/auth/register",
