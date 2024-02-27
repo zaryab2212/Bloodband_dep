@@ -15,7 +15,6 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(morgan("dev"));
 app.use(
   cors({
     origin: "https://bloodband-dep.vercel.app",
@@ -34,9 +33,9 @@ app.use("/admin", AdminRoutes);
 
 // static roudts
 
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./build/index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./build/index.html"));
+});
 
 //db connection
 database().catch((error) => console.log(error));
